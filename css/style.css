@@ -1,3 +1,28 @@
 * {
   box-sizing: border-box;
+  color: white;
+  border: 1px solid grey;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+body .conteiner {
+  width: 85vw;
+  margin: 0 auto;
+}
+body .conteiner .header {
+  height: 7vw;
+  display: flex;
+  justify-content: space-between;
+}
+body .conteiner .header .header_logo p {
+  font-size: 2.5vw;
+}
+body .conteiner .header .header_nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
 }/*# sourceMappingURL=style.css.map */
