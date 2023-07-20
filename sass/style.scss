@@ -1,31 +1,69 @@
 * {
     box-sizing: border-box;
     color: white;
-    border: 1px solid grey;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: #000;
+    background: linear-gradient(15deg, rgba(0,0,0,1) 55%, rgba(255,255,255,1) 200%);
+    background-attachment: fixed;
 
     .conteiner {
         width: 85vw;
         margin: 0 auto;
 
         .header {
-            height: 7vw;
+            height: 12vh;
             display: flex;
             justify-content: space-between;
 
+            .header_logo {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 1.8vh;
+
+                p {
+                    font-size: 4vh;
+                }
+                .affiliate {
+                    font-size: 2.5vh;
+                    font-style: italic;
+                    margin-left: 0.3vh;
+                }
+            }
+
             .header_logo p {
-                font-size: 2.5vw;
+                font-size: 4vh;
+            }
+
+            .header_nav {
+                display: flex;
+                align-items: flex-end;
+                margin-bottom: 0.75vh;
             }
 
             .header_nav ul {
                 display: flex;
                 flex-direction: row;
                 list-style-type: none;
+
+                li {
+                    font-size: 2.3vh;
+                    padding: 0.7vh 1.2vh;
+                    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+                    text-underline-offset: 0.3vh;
+                    transition: text-decoration 0.3s, text-underline-offset 0.3s, color 0.075s;
+                }
+                li:hover {
+                    text-decoration: underline;
+                    text-underline-offset: 1vh;
+                }
+                li:active {
+                    color: DarkSlateGray;
+                }
             }
         }
     }
