@@ -14,63 +14,88 @@
     <div class="conteiner">
 
         <header class="header">
-            <div class="header_logo">
-                <p>Poker PRO</p>
-                <p class="affiliate">affiliate</p>
+            <div class="logo">
+                <p class="logo__poker-pro">Poker PRO</p>
+                <p class="logo__affiliate">affiliate</p>
             </div>
-            <div class="header_nav">
+            <nav class="nav">
                 <ul>
                     <li>О нашей школе</li>
                     <li>Тренеры проекта</li>
                     <li>Отзывы</li>
                 </ul>
-            </div>
+            </nav>
         </header>
 
         <main>
-            <div class="main_top">
+            <div class="main-top">
 
-                <div class="main_top_img">
+                <div class="main-top__img">
                     <img src="img\alexander-jawfox-without-background.png" alt="Профессиональный игрок в покер">
                 </div>
-                <div class="main_top_quote">
+
+                <div class="main-top__tagline">
                     <p>Научим играть и побеждать! Бесплатно</p>
                     <button type="button">Поступить в школу!</button>
                 </div>
+
             </div>
 
-            <div class="main_form">
-                <div class="main_form_conteiner">
-                    <p class="description">Заполни анкету и присоеденяйся к команде!</p>
+            <div class="form">
+                <div class="form__conteiner">
+                    <p class="form__description">Заполни анкету и присоеденяйся к команде!</p>
                     <form action="" method="post">
-                        <div class="main_form_info">
-                            <div class="main_form_info_text">
-                                <p>Как тебя зовут</p>
-                                <p>Твой возраст</p>
-                                <p>Город проживания</p>
-                                <p>Telegram</p>
-                                <p>Играемая дисциплина</p>
-                                <p>Играемые лимиты и румы</p>
-                                <p>Расскажите о своём опыте и карьере</p>
-                                <p>Пару слов о внепокерном бэкграунде - на кого учился, где работал?</p>
-                                <p>Что ожидаешь от обучения?</p>
-                            </div>
-                            <div class="main_form_info_inputs">
-                                <input type="text">
-                                <input type="number">
-                                <input type="text">
-                                <input type="text">
-                                <select>
-                                    <option value="NL">NL</option>
-                                    <option value="PLO">PLO</option>
-                                </select>
-                                <input type="text">
-                                <textarea placeholder="Напишите о себе"></textarea>
-                            </div>
+                        <div class="form__question">
+                            <span>Как тебя зовут?</span>
+                            <input type="text" placeholder="Фамилия и имя">
                         </div>
-                        <div class="main_form_buttons">
-                            <button class="clear" type="reset">Отчистить</button>
-                            <button class="send" type="submit">Отправить</button>
+
+                        <div class="form__question">
+                            <span>Твой возраст</span>
+                            <input type="number">
+                        </div>
+
+                        <div class="form__question">
+                            <span>Город проживания</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="form__question">
+                            <span>Твой telegram</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="form__question">
+                            <span>Играемая дисциплина</span>
+                            <select>
+                                <option value="NL">NL</option>
+                                <option value="PLO">PLO</option>
+                            </select>
+                        </div>
+
+                        <div class="form__question">
+                            <span>Играемые лимиты и румы</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="form__question">
+                            <span>Расскажите о своём опыте и карьере</span>
+                            <textarea></textarea>
+                        </div>
+
+                        <div class="form__question">
+                            <span>Пару слов о внепокерном бэкграунде</span>
+                            <textarea placeholder="На кого учился, где работал?"></textarea>
+                        </div>
+
+                        <div class="form__question">
+                            <span>Что ожидаешь от обучения?</span>
+                            <textarea></textarea>
+                        </div>
+
+                        <div class="form__buttons">
+                            <button class="form__buttons-button form__buttons-button--dark" type="reset">Отчистить</button>
+                            <button class="form__buttons-button form__buttons-button--color" type="submit">Отправить</button>
                         </div>
                     </form>
                 </div>
