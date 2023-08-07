@@ -9,7 +9,7 @@
 }
 
 body {
-    background: linear-gradient(15deg, rgba(0,0,0,1) 70%, rgba(255,255,255,1) 200%);
+    background: linear-gradient(15deg, rgb(0, 0, 0) 70%, rgba(255,255,255,1) 200%);
     background-attachment: local;
 }
 
@@ -47,10 +47,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 0.9rem;
+    margin-top: 0.8rem;
 
     &__poker-pro {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     &__affiliate {
@@ -104,7 +104,7 @@ body {
         list-style-type: none;
 
         li {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             padding: 0.35rem 0.6rem;
             text-decoration: underline 0.15em rgba(255, 255, 255, 0);
             text-underline-offset: 0.16rem;
@@ -150,8 +150,8 @@ body {
         img {
             display: block;
             height: auto;
-            max-height: 90%;
-            max-width: 95%;
+            max-height: 80%;
+            max-width: 85%;
         }
     }
 
@@ -190,9 +190,9 @@ body {
             box-shadow: 0 0 30px 3px rgb(42, 42, 42);
             transition-property: background-position, background-image;
             transition-duration: .3s;
-            font-size: 11.5px;
+            font-size: 15px;
             padding: 15px 19px;
-            margin-left: 15%;
+            margin-left: 8%;
 
             @media (max-width: $breakpoint_xxl) {
                 margin-left: 10%;
@@ -221,9 +221,10 @@ body {
     border-style: solid;
     border-image: linear-gradient(to right ,#9EEFE1, #4830F0) 30; 
     box-shadow: 0 0 30px 5px rgb(42, 42, 42);                         
-    margin: 0 auto 3rem;
-    height: 88vh;
+    margin: 0 auto 7rem;
+    height: auto;
     width: 60%;
+    max-width: 800px;
     min-width: 725px;
 
     @media (max-width: $breakpoint_xxl) {
@@ -240,9 +241,8 @@ body {
     }
 
     &__conteiner {
-        border: 1px solid #000;
         margin: 0 auto;
-        padding: 0.8rem 0;
+        padding: 2.5rem 0 0.8rem;
         width: 85%;
     }
 
@@ -296,7 +296,7 @@ body {
         textarea {
             font-size: 0.8rem;
             border: 1px solid white;
-            height: 4.2vh;
+            height: 4.4rem;
             resize: none;
         }
     }
@@ -341,4 +341,60 @@ body {
             }
         }
     }
+}
+
+.about-us {
+    border: 1px solid white;
+    width: 80%;
+    margin: 0 auto 6rem;
+
+    &__text {
+        font-size: 2.8rem;
+        margin: 0 0 1rem 1.5rem;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    &__advantages {
+        border: 1px solid white;
+        background-color: #151515;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 1px rgb(133, 133, 133);
+        padding: 1rem 1rem 2rem;
+        width: 27%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 96px;
+            height: 96px;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.15rem;
+            line-height: 1.5;
+        }
+    }
+}
+
+.coaches {
+    border: 1px solid white;
+    width: 80%;
+    margin: 0 auto 6rem;
+
+    &__text {
+        font-size: 2.8rem;
+        margin: 0 0 1rem 1.5rem;
+    }
+}
+
+.coach-block {
+    border: 1px solid white;
+    margin-bottom: 1rem;
 }

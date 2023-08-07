@@ -52,10 +52,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 0.9rem;
+  margin-top: 0.8rem;
 }
 .logo__poker-pro {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 .logo__affiliate {
   font-style: italic;
@@ -107,7 +107,7 @@ body {
   list-style-type: none;
 }
 .nav ul li {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 0.35rem 0.6rem;
   -webkit-text-decoration: underline 0.15em rgba(255, 255, 255, 0);
           text-decoration: underline 0.15em rgba(255, 255, 255, 0);
@@ -157,8 +157,8 @@ body {
 .main-top__img img {
   display: block;
   height: auto;
-  max-height: 90%;
-  max-width: 95%;
+  max-height: 80%;
+  max-width: 85%;
 }
 .main-top__tagline {
   width: 50%;
@@ -197,9 +197,9 @@ body {
   box-shadow: 0 0 30px 3px rgb(42, 42, 42);
   transition-property: background-position, background-image;
   transition-duration: 0.3s;
-  font-size: 11.5px;
+  font-size: 15px;
   padding: 15px 19px;
-  margin-left: 15%;
+  margin-left: 8%;
 }
 @media (max-width: 1200px) {
   .main-top__tagline button {
@@ -228,9 +228,10 @@ body {
   -o-border-image: linear-gradient(to right, #9EEFE1, #4830F0) 30;
      border-image: linear-gradient(to right, #9EEFE1, #4830F0) 30;
   box-shadow: 0 0 30px 5px rgb(42, 42, 42);
-  margin: 0 auto 3rem;
-  height: 88vh;
+  margin: 0 auto 7rem;
+  height: auto;
   width: 60%;
+  max-width: 800px;
   min-width: 725px;
 }
 @media (max-width: 1200px) {
@@ -252,9 +253,8 @@ body {
   }
 }
 .form__conteiner {
-  border: 1px solid #000;
   margin: 0 auto;
-  padding: 0.8rem 0;
+  padding: 2.5rem 0 0.8rem;
   width: 85%;
 }
 .form__description {
@@ -297,7 +297,7 @@ body {
 .form__question textarea {
   font-size: 0.8rem;
   border: 1px solid white;
-  height: 4.2vh;
+  height: 4.4rem;
   resize: none;
 }
 .form__buttons {
@@ -334,4 +334,54 @@ body {
 }
 .form__buttons-button--color:hover {
   background-position: right center;
+}
+
+.about-us {
+  border: 1px solid white;
+  width: 80%;
+  margin: 0 auto 6rem;
+}
+.about-us__text {
+  font-size: 2.8rem;
+  margin: 0 0 1rem 1.5rem;
+}
+.about-us__wrap {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.about-us__advantages {
+  border: 1px solid white;
+  background-color: #151515;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px rgb(133, 133, 133);
+  padding: 1rem 1rem 2rem;
+  width: 27%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.about-us__advantages img {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 1rem;
+}
+.about-us__advantages p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.coaches {
+  border: 1px solid white;
+  width: 80%;
+  margin: 0 auto 6rem;
+}
+.coaches__text {
+  font-size: 2.8rem;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.coach-block {
+  border: 1px solid white;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */
