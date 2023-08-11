@@ -9,7 +9,7 @@
 }
 
 body {
-    background: linear-gradient(15deg, rgb(0, 0, 0) 70%, rgba(255,255,255,1) 200%);
+    background: linear-gradient(15deg, rgb(0, 0, 0) 75%, rgba(255,255,255,1) 200%);
     background-attachment: local;
 }
 
@@ -38,6 +38,9 @@ body {
     height: 12vh;
     max-height: 100px;
 
+    @media (max-width: $breakpoint_xl) {
+        margin-bottom: 3rem;
+    }
     @media (max-width: $breakpoint_md) {
         max-height: 92px;
     }
@@ -58,15 +61,26 @@ body {
         margin-left: 0.16rem;
         font-size: 1.5rem;
     }
-    @media (max-width: $breakpoint_xl) {
+    @media (max-width: $breakpoint_xxl) {
         margin-top: 1.2rem;
     
             &__poker-pro {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
             }
         
             &__affiliate {
                 font-size: 1.25rem;
+            }
+    }
+    @media (max-width: $breakpoint_xl) {
+        margin-top: 1.1rem;
+    
+            &__poker-pro {
+                font-size: 1.6rem;
+            }
+        
+            &__affiliate {
+                font-size: 1.15rem;
             }
     }
     @media (max-width: $breakpoint_md) {
@@ -97,21 +111,31 @@ body {
     display: flex;
     align-items: flex-end;
     margin-bottom: 0.38rem;
+    margin-top: 6.75rem;
+
+    @media (max-width: $breakpoint_xxl) {
+                margin-top: 6.5rem;
+            }
 
     ul {
         display: flex;
         flex-direction: row;
         list-style-type: none;
 
-        li {
+        .nav__li {
             font-size: 1.3rem;
+            line-height: 3rem;
             padding: 0.35rem 0.6rem;
             text-decoration: underline 0.15em rgba(255, 255, 255, 0);
             text-underline-offset: 0.16rem;
             transition: text-decoration 0.3s, text-underline-offset 0.3s, color 0.075s;
 
-            @media (max-width: $breakpoint_xl) {
+            @media (max-width: $breakpoint_xxl) {
                 font-size: 1.1rem;
+            }
+            @media (max-width: $breakpoint_xl) {
+                font-size: 0.95rem;
+                padding: 0.35rem 0.25rem;
             }
 
             &:hover {
@@ -123,18 +147,37 @@ body {
                 color: rgb(77, 78, 78);
             }
         }
+
+        .nav__telegram {
+            margin-left: 0.5rem;
+            
+            img {
+                height: 2.5rem;
+                width: 2.5rem;
+                margin-top: 0.4rem;
+
+                @media (max-width: $breakpoint_xxl) {
+                    height: 2rem;
+                    width: 2rem;
+                    margin-top: 0.65rem;
+                }
+            }
+        }
     }
 }
 
 .main-top {    // Начало страницы
     display: flex;
     height: 90vh;
+    margin-bottom: 5rem;
 
     @media (max-width: $breakpoint_xxl) {
         max-height: 880px;
     }
     @media (max-width: $breakpoint_xl) {
         max-height: 710px;
+        height: 80vh;
+        margin-bottom: 5.5rem;
     }
 
     &__img {
@@ -144,7 +187,7 @@ body {
         width: 50%;
 
         @media (max-width: $breakpoint_xl) {
-                margin-bottom: 4rem;
+                margin-bottom: 2rem;
         }
 
         img {
@@ -168,8 +211,9 @@ body {
             margin-left: 5%;
 
             @media (max-width: $breakpoint_xxl) {
-                font-size: 2.7rem;
+                font-size: 2.4rem;
                 margin-left: 10%;
+                margin-top: 2rem;
             }
             @media (max-width: $breakpoint_xl) {
                 font-size: 2.4rem;
@@ -181,7 +225,7 @@ body {
             color: white;
             margin-bottom: 7.25rem;
             border: none;
-            border-radius: 10px;
+            border-radius: 15px;
             font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -190,12 +234,15 @@ body {
             box-shadow: 0 0 30px 3px rgb(42, 42, 42);
             transition-property: background-position, background-image;
             transition-duration: .3s;
-            font-size: 15px;
-            padding: 15px 19px;
+            font-size: 1rem;
+            padding: 1rem 1.4rem;
             margin-left: 8%;
 
             @media (max-width: $breakpoint_xxl) {
-                margin-left: 10%;
+                border-radius: 8px;
+                font-size: 0.9rem;
+                padding: 0.9rem 1.25rem;
+                margin-left: 8%;
             }
             @media (max-width: $breakpoint_xl) {
                 font-size: 11px;
@@ -216,25 +263,270 @@ body {
     }
 }       
 
+.about-us {
+    margin: 0 auto 10rem;
+    width: 90%;
+
+    @media (max-width: $breakpoint_xxl) {
+        margin: 0 auto 5rem;
+    }
+    @media (max-width: $breakpoint_xl) {
+        margin: 0 auto 5rem;
+    }
+
+    &__text {
+        font-size: 2.8rem;
+        margin: 0 0 4rem 3.2rem;
+
+        @media (max-width: $breakpoint_xxl) {
+            font-size: 2.4rem;
+        }
+        @media (max-width: $breakpoint_xl) {
+            font-size: 2.2rem;
+            margin: 0 0 2.5rem 3.2rem;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    &__advantages {
+        background-color: #151515;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 1px rgb(133, 133, 133);
+        padding: 1rem 1rem 2rem;
+        width: 27%;
+        min-width: 280px;
+        margin-bottom: 2rem;
+        margin-right: 1.5rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $breakpoint_xxl) {
+            width: 30%;
+            min-width: 252px;
+            margin: 0 auto;
+        }
+        @media (max-width: $breakpoint_xl) {
+            width: 90%;
+            min-width: 252px;
+            margin-bottom: 1.3rem;
+            padding: 2rem 1rem 1rem;
+            flex-direction: row;
+        }
+
+        img {
+            width: 96px;
+            height: 96px;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.15rem;
+            line-height: 1.5;
+
+            @media (max-width: $breakpoint_xxl) {
+                font-size: 1.05rem;
+                line-height: 1.4;
+            }
+            @media (max-width: $breakpoint_xl) {
+                font-size: 1rem;
+                line-height: 1.3;
+                padding: 0 1.3rem;
+            }
+        }
+    }
+}
+
+.coaches {
+    width: 90%;
+    margin: 0 auto 13rem;
+
+    @media (max-width: 1320px) {
+        width: 99%;
+    }
+    @media (max-width: $breakpoint_xxl) {
+        margin: 0 auto 8rem;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        @media (max-width: $breakpoint_xxl) {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        font-size: 2.8rem;
+        margin: 0 0 4rem 3.2rem;
+
+        @media (max-width: $breakpoint_xxl) {
+            font-size: 2.4rem;
+            margin: 0 0 3rem 6.3rem;
+        }
+        @media (max-width: $breakpoint_xl) {
+            font-size: 2.2rem;
+            margin: 0 0 2.5rem 3.2rem;
+        }
+    }
+}
+
+.coach-block {
+    background-color: #151515;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px rgb(133, 133, 133);
+    padding: 1rem 0 2rem;
+    width: 30%;
+    min-width: 320px;
+    margin-right: 1.5%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $breakpoint_xxl) {
+        width: 82%;
+        max-width: 764px;
+        min-width: 252px;
+        margin: 0 auto 1.3rem;
+        padding: 0.5rem 0 1rem;
+    }
+    @media (max-width: $breakpoint_xl) {
+        width: 82%;
+        margin-bottom: 1.3rem;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+    }
+
+    &__photo {
+        height: 115px;
+        width: 115px;
+        object-fit: cover;
+        border-radius: 50%; 
+        position: absolute;
+        left: 7%;
+        top: 17%;
+
+        @media (max-width: $breakpoint_xxl) {
+            height: 105px;
+            width: 105px;
+            top: 12%;
+            left: 8%;
+        }
+    }
+
+    &__name {
+        font-size: 1.5rem;
+        font-family: Roboto, Roboto, Helvetica, Arial, sans-serif;  
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-align: right;
+        width: 220px;
+        padding: 2rem 2rem;
+
+        @media (max-width: $breakpoint_xxl) {
+            font-size: 1.4rem;
+            width: 50%;
+            min-width: 300px
+        }
+        @media (max-width: $breakpoint_xl) {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__discipline {
+        background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 100%);
+        padding: 0.6rem 0 0.6rem 7%;
+        text-align: center;
+        font-size: 1.6rem;
+        margin-bottom: 0.75rem;
+
+        @media (max-width: $breakpoint_xxl) {
+            font-size: 1.3rem;
+            padding: 0.4rem 0 0.4rem 0;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__discription {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        padding: 1.3rem 1rem 1.5rem;
+        margin-bottom: 0.75rem;
+
+        @media (max-width: $breakpoint_xxl) {
+            font-size: 1rem;
+            padding: 0.5rem 1.3rem 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__link {
+        border: 2px solid white;
+        border-radius: 20px;
+        margin: 0 auto;
+        text-align: center;
+        text-decoration: none;
+        width: auto;
+        display: flex;
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            padding: 0.6rem 0.5rem 0.6rem 1.5rem;
+
+            @media (max-width: $breakpoint_xxl) {
+                font-size: 1.3rem;
+                padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+                margin-bottom: 0.1rem;
+            }
+        }
+        
+        img {
+            width: 28px;
+            height: 28px;
+            margin-top: 0.6rem;
+            margin-right: 1.5rem;
+
+            @media (max-width: $breakpoint_xxl) {
+                width: 25.5px;
+                height: 25.5px;
+                margin-top: 0.5rem;
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}
+
 .form {   // форма
     border-width: 4px;
     border-style: solid;
     border-image: linear-gradient(to right ,#9EEFE1, #4830F0) 30; 
     box-shadow: 0 0 30px 5px rgb(42, 42, 42);                         
-    margin: 0 auto 7rem;
+    margin: 0 auto 10rem;
     height: auto;
     width: 60%;
     max-width: 800px;
     min-width: 725px;
 
     @media (max-width: $breakpoint_xxl) {
-        width: 70%;
-        min-width: 680px;
+        width: 725px;
+        min-width: 725px;
     }
     @media (max-width: $breakpoint_xl) {
         width: 70%;
         min-width: 680px;
-        max-height: 810px;
     }
     @media (max-width: $breakpoint_md) {
         width: 90%;
@@ -308,11 +600,11 @@ body {
 
         &-button {
             color: white;
-            padding: 0.4rem 0.85rem;
+            padding: 0.6rem 1.2rem;
             border: none;
-            border-radius: 2px;
+            border-radius: 10px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.85rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             background-size: 200% auto;
@@ -343,58 +635,3 @@ body {
     }
 }
 
-.about-us {
-    border: 1px solid white;
-    width: 80%;
-    margin: 0 auto 6rem;
-
-    &__text {
-        font-size: 2.8rem;
-        margin: 0 0 1rem 1.5rem;
-    }
-
-    &__wrap {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-
-    &__advantages {
-        border: 1px solid white;
-        background-color: #151515;
-        border-radius: 10px;
-        box-shadow: 0 0 5px 1px rgb(133, 133, 133);
-        padding: 1rem 1rem 2rem;
-        width: 27%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-
-        img {
-            width: 96px;
-            height: 96px;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 1.15rem;
-            line-height: 1.5;
-        }
-    }
-}
-
-.coaches {
-    border: 1px solid white;
-    width: 80%;
-    margin: 0 auto 6rem;
-
-    &__text {
-        font-size: 2.8rem;
-        margin: 0 0 1rem 1.5rem;
-    }
-}
-
-.coach-block {
-    border: 1px solid white;
-    margin-bottom: 1rem;
-}
