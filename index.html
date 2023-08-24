@@ -25,8 +25,8 @@
                 <ul>
                     <li class="nav__li">О нашей школе</li>
                     <li class="nav__li">Тренеры проекта</li>
-                    <li class="nav__li">Отзывы</li>
-                    <li class="nav__li">Заполнить анкету</li>
+                    <li class="nav__li">Блог</li>
+                    <li class="nav__li" id="liToForm">Заполнить анкету</li>
                     <li class="nav__li nav__li--telegram"><a href="https://t.me/roadtopokerpro"><span class="nav__telegram-text">Telegram</span><img src="./img/icons8-логотип-telegram-50.png" alt="telegram"></a></li>
                 </ul>
             </nav>
@@ -41,8 +41,8 @@
                 </div>
 
                 <div class="main-top__tagline">
-                    <p>Научим играть и побеждать! Бесплатно</p>
-                    <button type="button">Поступить в школу!</button>
+                    <h1>Научим играть и побеждать! Бесплатно</h1>
+                    <button id="btnToForm" type="button">Поступить в школу!</button>
                 </div>
 
             </div>
@@ -51,7 +51,7 @@
                 <h2 class="about-us__text">О покер школе</h2>
                 <div class="about-us__wrap">
                     <div class="about-us__advantages">
-                        <img src="./img/grafic-96.png" alt="icon">
+                        <img src="./img/diagram-svgrepo-com.svg" alt="icon">
                         <p>Проект "Дорога к Покер-ПРО" - для тех,
                             кто понимает, что покер и прибыльный покер
                              - разные понятия. Мы заинтересованы в том,
@@ -61,7 +61,7 @@
                         </p> 
                     </div>
                     <div class="about-us__advantages">
-                        <img src="./img/team-96.png" alt="icon">
+                        <img src="./img/team-svgrepo-com.svg" alt="icon">
                         <p>"Наши высоко<wbr>квалифицированные тренеры – опытные игроки,
                              чьи пальцы стучат по клавишам с момента зарождения онлайн покера.
                               Мы не просто перечитываем теорию, мы воплощаем её в действие,
@@ -69,7 +69,7 @@
                         </p>                                                           
                     </div>
                     <div class="about-us__advantages">
-                        <img src="./img/time-96.png" alt="icon">
+                        <img src="./img/time-watch-svgrepo-com.svg" alt="icon">
                         <p>"Наши высоко<wbr>квалифицированные тренеры – опытные игроки,
                              чьи пальцы стучат по клавишам с момента зарождения онлайн покера.
                               Мы не просто перечитываем теорию, мы воплощаем её в действие,
@@ -85,39 +85,123 @@
 
                 <div class="coaches__wrap">
                     <div class="coach-block">
-                        <div class="coach-block__top">
-                            <p class="coach-block__name">Сергей Moyxozyain</p>
-                            <img class="coach-block__photo" src="./img/1person wb.png" alt="coach's photo">    
-                        </div>
-                        <p class="coach-block__discipline">Holdem</p>
-                        <p class="coach-block__discription">Строю эксплойтные стратегии против разных типов оппонентов на основе анализа баз данных. Продвинутый польховать Х2Н и создатель уникального Хада. Тренирую с 2019 года. Увлекаюсь разбором игры против фишей.</p>
-                        <a class="coach-block__link" href="https://telegra.ph/Doroga-k-POKER-PRO-05-20"><p>Статья</p><img src="./img/icons8-телеграм-48.png" alt="telegram"></a>
+                        <a href="#">
+                            <div class="coach-block__top">
+                                <p class="coach-block__name">Сергей Moyxozyain</p>
+                                <img class="coach-block__photo" src="./img/1person wb.png" alt="coach's photo">    
+                            </div>
+                            <p class="coach-block__discipline">Holdem</p>
+                            <p class="coach-block__discription">Строю эксплойтные стратегии против разных типов оппонентов на основе анализа баз данных.
+                                 Продвинутый польховать Х2Н и создатель уникального Хада. Тренирую с 2019 года. Увлекаюсь разбором игры против фишей.</p>
+                        </a>
                     </div>
     
                     <div class="coach-block">
-                        <div class="coach-block__top">
+                        <a href="#"><div class="coach-block__top">
                             <p class="coach-block__name">Виктор Грагик</p>
                             <img class="coach-block__photo" src="./img/2person wb.png" alt="coach's photo">
                         </div>
                         <p class="coach-block__discipline">Holdem</p>
-                        <p class="coach-block__discription">Строю эксплойтные стратегии против разных типов оппонентов на основе анализа баз данных. Продвинутый польховать Х2Н и создатель уникального Хада. Тренирую с 2019 года. Увлекаюсь разбором игры против фишей.</p>
-                        <a class="coach-block__link" href="https://telegra.ph/Intervyu-s-Viktorom-07-30"><p>Статья</p><img src="./img/icons8-телеграм-48.png" alt="telegram"></a>
+                        <p class="coach-block__discription">Строю эксплойтные стратегии против разных типов оппонентов на основе анализа баз данных.
+                             Продвинутый польховать Х2Н и создатель уникального Хада. Тренирую с 2019 года. Увлекаюсь разбором игры против фишей.</p></a>
                     </div>
     
                     <div class="coach-block">
-                        <div class="coach-block__top">
-                            <p class="coach-block__name">Евгений EvenBetter</p>
-                            <img class="coach-block__photo" src="./img/3person wb.png" alt="coach's photo">
-                        </div>
-                        <p class="coach-block__discipline">Omaha</p>
-                        <p class="coach-block__discription">Строю эксплойтные стратегии против разных типов оппонентов на основе анализа баз данных. Продвинутый польховать Х2Н и создатель уникального Хада. Тренирую с 2019 года. Увлекаюсь разбором игры против фишей.</p>
-                        <a class="coach-block__link" href="https://telegra.ph/Intervyu-s-Sergej-moixozyain-07-31"><p>Статья</p><img src="./img/icons8-телеграм-48.png" alt="telegram"></a>
+                        <a href="#">
+                            <div class="coach-block__top">
+                                <p class="coach-block__name">Евгений EvenBetter</p>
+                                <img class="coach-block__photo" src="./img/3person wb.png" alt="coach's photo">
+                            </div>
+                            <p class="coach-block__discipline">Omaha</p>
+                            <p class="coach-block__discription">Строю эксплойтные стратегии против разных типов оппонентов на основе анализа баз данных.
+                                 Продвинутый польховать Х2Н и создатель уникального Хада. Тренирую с 2019 года. Увлекаюсь разбором игры против фишей.</p>
+                        </a>
                     </div>
                 </div>
 
             </div>
 
-            <div class="form">
+            <div class="onboarding-overlay"></div>  <!--onboarding-->
+            
+            <div class="onboarding-conteiner"> 
+                <div class="onboarding-conteiner__close" id="close">
+                </div>
+                <h3>Заполни анкету и присоеденяйся к команде!</h3>
+                <div class="form">
+                    <form action="" method="post">
+
+                        <div class="form__part" id="part1">  <!--onboarding part1-->
+                            <div class="form__image">
+                                <img src="/img/form/verified-svgrepo-com.svg" alt="">
+                            </div>
+                            <div class="form__question">
+                                <p>Как тебя зовут?</p>
+                                <input type="text" placeholder="Фамилия и имя">
+                            </div>
+                            <div class="form__question">
+                                <p>Твой возраст</p>
+                                <input type="number">
+                            </div>
+                            <div class="form__question">
+                                <p>Город проживания</p>
+                                <input type="text">
+                            </div>
+                            <div class="form__question">
+                                <p>Telegram для связи</p>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form__part" id="part2"> <!--onboarding part2-->
+                            <div class="form__image">
+                                <img src="/img/form/open-an-account-svgrepo-com.svg" alt="">
+                            </div>
+                            <div class="form__question">
+                                <p>Играемая дисциплина</p>
+                                <select>
+                                    <option value="NL">NL</option>
+                                    <option value="PLO">PLO</option>
+                                </select>
+                            </div>
+                            <div class="form__question">
+                                <p>Играемые лимиты и румы</p>
+                                <input type="text">
+                            </div>
+
+                            <div class="form__question">
+                                <p>Расскажите о своём опыте и карьере</p>
+                                <textarea rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form__part" id="part3"> <!--onboarding part3-->
+                            <div class="form__image">
+                                <img src="/img/form/help-svgrepo-com.svg" alt="">
+                            </div>
+                            <div class="form__question">
+                                <p>Пару слов о внепокерном бэкграунде</p>
+                                <textarea rows="3" placeholder="На кого учился, где работал?"></textarea>
+                            </div>
+
+                            <div class="form__question">
+                                <p>Что ожидаешь от обучения?</p>
+                                <textarea rows="3"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div> 
+                <!-- <p class="onboarding-conteiner__steps">Шаг 1<span class="num-of-step"></span></p> -->
+                <div class="onboarding-conteiner__dots"> <!--onboarding dots-->
+                    <div class="onboarding-conteiner__dot" id="dot1"></div>
+                    <div class="onboarding-conteiner__dot" id="dot2"></div>
+                    <div class="onboarding-conteiner__dot" id="dot3"></div>
+                </div>
+                <div class="onboarding-conteiner__buttons"> <!--onboarding buttons-->
+                    <button class="onboarding-conteiner__btn onboarding-conteiner__btn--return" id="btnReturn">вернуться</button>
+                    <button class="onboarding-conteiner__btn onboarding-conteiner__btn--next" id="btnNext">далее</button>
+                    <button class="onboarding-conteiner__btn onboarding-conteiner__btn--send" id="btnSend" type="submit">отправить</button>
+                </div>
+            </div>
+
+            <!-- <div class="form">
                 <div class="form__conteiner">
                     <p class="form__description">Заполни анкету и присоеденяйся к команде!</p>
                     <form action="" method="post">
@@ -177,8 +261,9 @@
                 </div>
             </div>
         </main>
-    </div>
+    </div> -->
     
     <script src="./js/menu-burger.js"></script>
+    <script src="./js/onboarding.js"></script>
 </body>
 </html>
