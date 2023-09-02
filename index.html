@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poker Pro affiliate</title>
+    <title>Raise Zone</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,17 +15,17 @@
 
         <header class="header">
             <div class="logo">
-                <p class="logo__poker-pro">Poker PRO</p>
-                <p class="logo__affiliate">affiliate</p>
+                <p class="logo__raise-zone">Raise <span>Zone</span></p>
+                <p class="logo__poker">poker without limit</p>
             </div>
             <div class="burger">
                 <span></span>
             </div>
             <nav class="nav">
                 <ul>
-                    <li class="nav__li">О нашей школе</li>
-                    <li class="nav__li">Тренеры проекта</li>
-                    <li class="nav__li">Блог</li>
+                    <li class="nav__li" data-goto=".about-us">О нашей школе</li>
+                    <li class="nav__li" data-goto=".coaches">Тренеры проекта</li>
+                    <li class="nav__li" data-goto=".blog" style="display: none;">Блог</li>
                     <li class="nav__li" id="liToForm">Заполнить анкету</li>
                     <li class="nav__li nav__li--telegram"><a href="https://t.me/roadtopokerpro"><span class="nav__telegram-text">Telegram</span><img src="./img/icons8-логотип-telegram-50.png" alt="telegram"></a></li>
                 </ul>
@@ -85,7 +85,7 @@
 
                 <div class="coaches__wrap">
                     <div class="coach-block">
-                        <a href="#">
+                        <a href="https://telegra.ph/Doroga-k-POKER-PRO-05-20">
                             <div class="coach-block__top">
                                 <p class="coach-block__name">Сергей Moyxozyain</p>
                                 <img class="coach-block__photo" src="./img/1person wb.png" alt="coach's photo">    
@@ -93,21 +93,24 @@
                             <p class="coach-block__discipline">Holdem</p>
                             <p class="coach-block__discription">Строю эксплойтные стратегии против разных типов оппонентов на основе анализа баз данных.
                                  Продвинутый польховать Х2Н и создатель уникального Хада. Тренирую с 2019 года. Увлекаюсь разбором игры против фишей.</p>
+                            <h4>Узнать подробнее</h4>
                         </a>
                     </div>
     
                     <div class="coach-block">
-                        <a href="#"><div class="coach-block__top">
+                        <a href="https://telegra.ph/Intervyu-s-Viktorom-07-30"><div class="coach-block__top">
                             <p class="coach-block__name">Виктор Грагик</p>
                             <img class="coach-block__photo" src="./img/2person wb.png" alt="coach's photo">
                         </div>
                         <p class="coach-block__discipline">Holdem</p>
                         <p class="coach-block__discription">Строю эксплойтные стратегии против разных типов оппонентов на основе анализа баз данных.
-                             Продвинутый польховать Х2Н и создатель уникального Хада. Тренирую с 2019 года. Увлекаюсь разбором игры против фишей.</p></a>
+                             Продвинутый польховать Х2Н и создатель уникального Хада. Тренирую с 2019 года. Увлекаюсь разбором игры против фишей.</p>
+                        <h4>Узнать подробнее</h4>
+                        </a>
                     </div>
     
                     <div class="coach-block">
-                        <a href="#">
+                        <a href="https://telegra.ph/Intervyu-s-Sergej-moixozyain-07-31">
                             <div class="coach-block__top">
                                 <p class="coach-block__name">Евгений EvenBetter</p>
                                 <img class="coach-block__photo" src="./img/3person wb.png" alt="coach's photo">
@@ -115,10 +118,21 @@
                             <p class="coach-block__discipline">Omaha</p>
                             <p class="coach-block__discription">Строю эксплойтные стратегии против разных типов оппонентов на основе анализа баз данных.
                                  Продвинутый польховать Х2Н и создатель уникального Хада. Тренирую с 2019 года. Увлекаюсь разбором игры против фишей.</p>
+                            <h4>Узнать подробнее</h4>
                         </a>
                     </div>
                 </div>
-
+            </div>
+            <div class="blog">
+                <h2>Наш блог в телеграм</h2>
+                <div class="blog__posts">
+                    <div>
+                        <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="Raise_Zone/11" data-width="100%"></script>
+                    </div>
+                    <div>
+                        <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="Raise_Zone/13" data-width="100%"></script>
+                    </div>
+                </div>
             </div>
 
             <div class="onboarding-overlay"></div>  <!--onboarding-->
@@ -130,7 +144,7 @@
                 <div class="form">
                     <form action="" method="post">
 
-                        <div class="form__part" id="part1">  <!--onboarding part1-->
+                        <div class="form__part form__part--active" id="part1">  <!--onboarding part1-->
                             <div class="form__image">
                                 <img src="/img/form/verified-svgrepo-com.svg" alt="">
                             </div>
@@ -200,70 +214,11 @@
                     <button class="onboarding-conteiner__btn onboarding-conteiner__btn--send" id="btnSend" type="submit">отправить</button>
                 </div>
             </div>
-
-            <!-- <div class="form">
-                <div class="form__conteiner">
-                    <p class="form__description">Заполни анкету и присоеденяйся к команде!</p>
-                    <form action="" method="post">
-                        <div class="form__question">
-                            <span>Как тебя зовут?</span>
-                            <input type="text" placeholder="Фамилия и имя">
-                        </div>
-
-                        <div class="form__question">
-                            <span>Твой возраст</span>
-                            <input type="number">
-                        </div>
-
-                        <div class="form__question">
-                            <span>Город проживания</span>
-                            <input type="text">
-                        </div>
-
-                        <div class="form__question">
-                            <span>Твой telegram</span>
-                            <input type="text">
-                        </div>
-
-                        <div class="form__question">
-                            <span>Играемая дисциплина</span>
-                            <select>
-                                <option value="NL">NL</option>
-                                <option value="PLO">PLO</option>
-                            </select>
-                        </div>
-
-                        <div class="form__question">
-                            <span>Играемые лимиты и румы</span>
-                            <input type="text">
-                        </div>
-
-                        <div class="form__question">
-                            <span>Расскажите о своём опыте и карьере</span>
-                            <textarea></textarea>
-                        </div>
-
-                        <div class="form__question">
-                            <span>Пару слов о внепокерном бэкграунде</span>
-                            <textarea placeholder="На кого учился, где работал?"></textarea>
-                        </div>
-
-                        <div class="form__question">
-                            <span>Что ожидаешь от обучения?</span>
-                            <textarea></textarea>
-                        </div>
-
-                        <div class="form__buttons">
-                            <button class="form__buttons-button form__buttons-button--dark" type="reset">Очистить</button>
-                            <button class="form__buttons-button form__buttons-button--color" type="submit">Отправить</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </main>
-    </div> -->
+        </main>    
+    </div>
     
-    <script src="./js/menu-burger.js"></script>
+    
+    <script src="./js/navigation-burger.js"></script>
     <script src="./js/onboarding.js"></script>
 </body>
 </html>
