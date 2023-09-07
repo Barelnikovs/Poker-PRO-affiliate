@@ -80,10 +80,10 @@ body.lock {
   .logo {
     margin-top: 1.2rem;
   }
-  .logo__poker-pro {
+  .logo__raise-zone {
     font-size: 1.7rem;
   }
-  .logo__affiliate {
+  .logo__poker {
     font-size: 0.825rem;
   }
 }
@@ -91,10 +91,10 @@ body.lock {
   .logo {
     margin-top: 1.1rem;
   }
-  .logo__poker-pro {
+  .logo__raise-zone {
     font-size: 1.6rem;
   }
-  .logo__affiliate {
+  .logo__poker {
     font-size: 0.765rem;
   }
 }
@@ -256,7 +256,7 @@ body.lock {
   }
 }
 .nav ul .nav__li--telegram img:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .main-top {
@@ -607,10 +607,11 @@ body.lock {
   height: auto;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 .coach-block:hover {
-  transform: scale(1.02);
+  transform: scale(1.028);
+  box-shadow: 0 0 10px 1px rgb(134, 134, 134);
 }
 .coach-block a {
   text-decoration: none;
@@ -767,7 +768,6 @@ body.lock {
   position: fixed;
   left: 50%;
   top: 50%;
-  overflow: scroll;
   transform: translate(-50%, calc(-50% + 25px));
   opacity: 0;
   transition: all 0.4s ease;
@@ -794,10 +794,32 @@ body.lock {
     padding: 1rem;
   }
 }
+@media (max-width: 389px) {
+  .onboarding-conteiner {
+    width: 92%;
+    padding: 0.75rem;
+  }
+}
 .onboarding-conteiner--active {
   transform: translate(-50%, -50%);
   opacity: 1;
   z-index: 13;
+}
+.onboarding-conteiner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4) url(/img/form/Circles-menu-3.gif) center/60px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+.onboarding-conteiner.sending::after {
+  opacity: 1;
+  visibility: visible;
 }
 .onboarding-conteiner__close {
   margin: 0 0 0 auto;
@@ -810,9 +832,17 @@ body.lock {
 }
 @media (max-width: 470px) {
   .onboarding-conteiner__close {
-    width: 25px;
-    height: 16px;
-    left: 0.7rem;
+    width: 27.5px;
+    height: 18px;
+    top: 0.1rem;
+    left: 0.5rem;
+  }
+}
+@media (max-width: 389px) {
+  .onboarding-conteiner__close {
+    width: 22.5px;
+    height: 14px;
+    left: 0.2rem;
   }
 }
 .onboarding-conteiner__close::before, .onboarding-conteiner__close::after {
@@ -847,17 +877,27 @@ body.lock {
     font-size: 1.6rem;
   }
 }
+@media (max-width: 389px) {
+  .onboarding-conteiner h3 {
+    font-size: 1.2rem;
+  }
+}
 .onboarding-conteiner .form {
   box-sizing: border-box;
 }
 .onboarding-conteiner .form__part {
   display: none;
-  height: 549px;
+  height: 565px;
   margin-bottom: 0.2rem;
 }
 @media (max-width: 576px) {
   .onboarding-conteiner .form__part {
-    height: 330px;
+    height: 355px;
+  }
+}
+@media (max-width: 389px) {
+  .onboarding-conteiner .form__part {
+    height: 295px;
   }
 }
 .onboarding-conteiner .form__part--active {
@@ -879,16 +919,19 @@ body.lock {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.onboarding-conteiner .form__question p {
+.onboarding-conteiner .form__question label {
   color: #000;
   font-weight: bold;
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
 }
 @media (max-width: 576px) {
-  .onboarding-conteiner .form__question p {
+  .onboarding-conteiner .form__question label {
     font-size: 1.3rem;
-    margin-bottom: 0.4rem;
+  }
+}
+@media (max-width: 389px) {
+  .onboarding-conteiner .form__question label {
+    font-size: 1.1rem;
   }
 }
 .onboarding-conteiner .form__question input, .onboarding-conteiner .form__question select, .onboarding-conteiner .form__question textarea {
@@ -900,7 +943,7 @@ body.lock {
   line-height: 2rem;
   resize: none;
   padding: 0.2rem 0.5rem;
-  margin-bottom: 1rem;
+  margin: 0.3rem 0 1rem;
   width: 100%;
 }
 @media (max-width: 576px) {
@@ -908,6 +951,16 @@ body.lock {
     font-size: 1.3rem;
     line-height: 1.76rem;
   }
+}
+@media (max-width: 389px) {
+  .onboarding-conteiner .form__question input, .onboarding-conteiner .form__question select, .onboarding-conteiner .form__question textarea {
+    font-size: 1.1rem;
+    line-height: 1.55rem;
+    margin: 0.25rem 0 0.5rem;
+  }
+}
+.onboarding-conteiner .form__question input.error, .onboarding-conteiner .form__question select.error, .onboarding-conteiner .form__question textarea.error {
+  box-shadow: 0 0 15px #ce441f;
 }
 .onboarding-conteiner .form__question input:focus, .onboarding-conteiner .form__question select:focus, .onboarding-conteiner .form__question textarea:focus {
   outline: none;
@@ -917,6 +970,17 @@ body.lock {
 }
 .onboarding-conteiner .form__question input::placeholder, .onboarding-conteiner .form__question select::placeholder, .onboarding-conteiner .form__question textarea::placeholder {
   color: #515151;
+}
+.onboarding-conteiner .form .filling {
+  text-align: right;
+  color: #ce441f;
+  font-size: 1.2rem;
+  padding: 0 0.2rem 0.5rem 0;
+}
+@media (max-width: 576px) {
+  .onboarding-conteiner .form .filling {
+    font-size: 1rem;
+  }
 }
 .onboarding-conteiner__dots {
   display: flex;

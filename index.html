@@ -51,7 +51,7 @@
                 <h2 class="about-us__text">О покер школе</h2>
                 <div class="about-us__wrap">
                     <div class="about-us__advantages">
-                        <img src="./img/diagram-svgrepo-com.svg" alt="icon">
+                        <img src="./img/about-us/histogram-svgrepo-com.svg" alt="icon">
                         <p>Проект "Дорога к Покер-ПРО" - для тех,
                             кто понимает, что покер и прибыльный покер
                              - разные понятия. Мы заинтересованы в том,
@@ -61,7 +61,7 @@
                         </p> 
                     </div>
                     <div class="about-us__advantages">
-                        <img src="./img/team-svgrepo-com.svg" alt="icon">
+                        <img src="./img/about-us/honor-svgrepo-com.svg" alt="icon">
                         <p>"Наши высоко<wbr>квалифицированные тренеры – опытные игроки,
                              чьи пальцы стучат по клавишам с момента зарождения онлайн покера.
                               Мы не просто перечитываем теорию, мы воплощаем её в действие,
@@ -69,7 +69,7 @@
                         </p>                                                           
                     </div>
                     <div class="about-us__advantages">
-                        <img src="./img/time-watch-svgrepo-com.svg" alt="icon">
+                        <img src="./img/about-us/time-svgrepo-com.svg" alt="icon">
                         <p>"Наши высоко<wbr>квалифицированные тренеры – опытные игроки,
                              чьи пальцы стучат по клавишам с момента зарождения онлайн покера.
                               Мы не просто перечитываем теорию, мы воплощаем её в действие,
@@ -142,27 +142,30 @@
                 </div>
                 <h3>Заполни анкету и присоеденяйся к команде!</h3>
                 <div class="form">
-                    <form action="" method="post">
+                    <form id="form" action="#" method="post">
 
                         <div class="form__part form__part--active" id="part1">  <!--onboarding part1-->
                             <div class="form__image">
                                 <img src="/img/form/verified-svgrepo-com.svg" alt="">
                             </div>
                             <div class="form__question">
-                                <p>Как тебя зовут?</p>
-                                <input type="text" placeholder="Фамилия и имя">
+                                <label class="form__label" for="formName">Как тебя зовут?</label>
+                                <input class="form__input" id="formName" type="text" placeholder="Фамилия и имя">
                             </div>
                             <div class="form__question">
-                                <p>Твой возраст</p>
-                                <input type="number">
+                                <label class="form__label" for="formAge">Твой возраст</label>
+                                <input class="form__input" id="formAge" type="number">
                             </div>
                             <div class="form__question">
-                                <p>Город проживания</p>
-                                <input type="text">
+                                <label class="form__label" for="formLocation">Город проживания</label>
+                                <input class="form__input" id="formLocation" type="text">
                             </div>
                             <div class="form__question">
-                                <p>Telegram для связи</p>
-                                <input type="text">
+                                <label class="form__label" for="formTelegram">Telegram для связи</label>
+                                <input class="form__input" id="formTelegram" type="text">
+                            </div>
+                            <div>
+                                <p class="filling"></p>
                             </div>
                         </div>
                         <div class="form__part" id="part2"> <!--onboarding part2-->
@@ -170,20 +173,23 @@
                                 <img src="/img/form/open-an-account-svgrepo-com.svg" alt="">
                             </div>
                             <div class="form__question">
-                                <p>Играемая дисциплина</p>
-                                <select>
+                                <label class="form__label" for="formTelegram">Играемая дисциплина</label>
+                                <select id="formTelegram">
                                     <option value="NL">NL</option>
                                     <option value="PLO">PLO</option>
                                 </select>
                             </div>
                             <div class="form__question">
-                                <p>Играемые лимиты и румы</p>
-                                <input type="text">
+                                <label class="form__label" for="formLimits">Играемые лимиты и румы</label>
+                                <input class="form__input" id="formLimits" type="text">
                             </div>
 
                             <div class="form__question">
-                                <p>Расскажите о своём опыте и карьере</p>
-                                <textarea rows="3"></textarea>
+                                <label class="form__label" for="formAboutExperience">Расскажите о своём опыте и карьере</label>
+                                <textarea class="form__input" id="formAboutExperience" rows="3"></textarea>
+                            </div>
+                            <div>
+                                <p class="filling"></p>
                             </div>
                         </div>
                         <div class="form__part" id="part3"> <!--onboarding part3-->
@@ -191,18 +197,19 @@
                                 <img src="/img/form/help-svgrepo-com.svg" alt="">
                             </div>
                             <div class="form__question">
-                                <p>Пару слов о внепокерном бэкграунде</p>
-                                <textarea rows="3" placeholder="На кого учился, где работал?"></textarea>
+                                <label class="form__label" for="formAboutbackground">Пару слов о внепокерном бэкграунде</label>
+                                <textarea class="form__input" id="formAboutbackground" rows="3" placeholder="На кого учился, где работал?"></textarea>
                             </div>
-
                             <div class="form__question">
-                                <p>Что ожидаешь от обучения?</p>
-                                <textarea rows="3"></textarea>
+                                <label class="form__label" for="formExpectations">Что ожидаешь от обучения?</label>
+                                <textarea class="form__input" id="formExpectations" rows="3"></textarea>
+                            </div>
+                            <div>
+                                <p class="filling"></p>
                             </div>
                         </div>
                     </form>
                 </div> 
-                <!-- <p class="onboarding-conteiner__steps">Шаг 1<span class="num-of-step"></span></p> -->
                 <div class="onboarding-conteiner__dots"> <!--onboarding dots-->
                     <div class="onboarding-conteiner__dot" id="dot1"></div>
                     <div class="onboarding-conteiner__dot" id="dot2"></div>
@@ -220,5 +227,6 @@
     
     <script src="./js/navigation-burger.js"></script>
     <script src="./js/onboarding.js"></script>
+    <script src="./js/form-validation.js"></script>
 </body>
 </html>

@@ -77,22 +77,22 @@ body {
     @media (max-width: $breakpoint_xxl) {
         margin-top: 1.2rem;
     
-        &__poker-pro {
+        &__raise-zone {
             font-size: 1.7rem;
         }
     
-        &__affiliate {
+        &__poker {
             font-size: 0.825rem;
         }
     }
     @media (max-width: $breakpoint_xl) {
         margin-top: 1.1rem;
     
-        &__poker-pro {
+        &__raise-zone {
             font-size: 1.6rem;
         }
     
-        &__affiliate {
+        &__poker {
             font-size: 0.765rem;
         }
     }
@@ -256,7 +256,7 @@ body {
                     }
 
                     &:hover {
-                        transform: scale(1.1);
+                        transform: scale(1.15);
                     }
                 }
             }
@@ -568,10 +568,11 @@ body {
     height: auto;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
-        transform: scale(1.02);
+        transform: scale(1.028);
+        box-shadow: 0 0 10px 1px rgb(134, 134, 134);
     }
 
     a {
@@ -719,7 +720,6 @@ body {
     position: fixed;
     left: 50%;
     top: 50%;
-    overflow: scroll;
     transform: translate(-50%, calc(-50% + 25px));
     opacity: 0;
     transition: all 0.4s ease;
@@ -738,11 +738,33 @@ body {
         width: 95%;
         padding: 1rem;
     }
+    @media (max-width: 389px) {
+        width: 92%;
+        padding: 0.75rem;
+    }
 
     &--active {
         transform: translate(-50%, -50%);
         opacity: 1;
         z-index: 13;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4) url(/img/form/Circles-menu-3.gif) center / 60px no-repeat;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease 0s;
+    }
+
+    &.sending::after {
+        opacity: 1;
+        visibility: visible;
     }
 
     &__close {
@@ -755,9 +777,15 @@ body {
         top: -0.3rem;
 
         @media (max-width: 470px) {
-            width: 25px;
-            height: 16px;
-            left: .7rem;
+            width: 27.5px;
+            height: 18px;
+            top: 0.1rem;
+            left: .5rem;
+        }
+        @media (max-width: 389px) {
+            width: 22.5px;
+            height: 14px;
+            left: 0.2rem;
         }
         
         &::before, &::after {
@@ -793,6 +821,9 @@ body {
         @media (max-width: $breakpoint_sm) {
             font-size: 1.6rem;
         }
+        @media (max-width: 389px) {
+            font-size: 1.2rem;
+        }
     }
 
     .form {
@@ -800,11 +831,14 @@ body {
 
         &__part {
             display: none;
-            height: 549px;
+            height: 565px;
             margin-bottom: 0.2rem;
 
             @media (max-width: $breakpoint_sm) {
-                height: 330px;
+                height: 355px;
+            }
+            @media (max-width: 389px) {
+                height: 295px;
             }
 
             &--active {
@@ -829,16 +863,16 @@ body {
         }
 
         &__question {
-
-            p {
+            label {
                 color: #000;
                 font-weight: bold;
                 font-size: 1.5rem;
-                margin-bottom: 0.5rem;
 
                 @media (max-width: $breakpoint_sm) {
                     font-size: 1.3rem;
-                    margin-bottom: 0.4rem;
+                }
+                @media (max-width: 389px) {
+                    font-size: 1.1rem;
                 }
             }
 
@@ -851,12 +885,21 @@ body {
                 line-height: 2rem;
                 resize: none;
                 padding: 0.2rem 0.5rem; 
-                margin-bottom: 1rem;
+                margin: 0.3rem 0 1rem;
                 width: 100%;
 
                 @media (max-width: $breakpoint_sm) {
                     font-size: 1.3rem;
                     line-height: 1.76rem;
+                }
+                @media (max-width: 389px) {
+                    font-size: 1.1rem;
+                    line-height: 1.55rem;
+                    margin: 0.25rem 0 0.5rem;
+                }
+
+                &.error {
+                    box-shadow: 0 0 15px $base-color;
                 }
 
                 &:focus {
@@ -866,6 +909,17 @@ body {
                 &::placeholder {
                     color:    #515151;
                 }
+            }
+        }
+
+        .filling {
+            text-align: right;
+            color: $base-color;
+            font-size: 1.2rem;
+            padding: 0 0.2rem 0.5rem 0;
+
+            @media (max-width: $breakpoint_sm) {
+                font-size: 1rem;
             }
         }
     }
