@@ -95,6 +95,3 @@ function Return() {
         part1.classList.add('form__part--active') 
     }
 }
-
-
-

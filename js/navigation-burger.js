@@ -13,6 +13,8 @@ function burgerMenuToggle() {
 }
 
 burgerMenu.addEventListener('click', burgerMenuToggle)
+
+// Отключение бургер меню при клике на любой пункт
 lists.forEach(elem => {
     elem.addEventListener('click', function() {
         if (burgerMenu.classList.contains('active')) {
@@ -21,7 +23,7 @@ lists.forEach(elem => {
     })
 })
 
-// Переходы по ссылкам
+// Скролл по нажатию по пунктам навигации
 if (listsGoTo.length > 0) {
     listsGoTo.forEach((listGoTo) => {
         listGoTo.addEventListener('click', goToBlock)
