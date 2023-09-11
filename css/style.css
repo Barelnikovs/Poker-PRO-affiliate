@@ -600,13 +600,14 @@ body.lock {
   background-color: #151515;
   border-radius: 10px;
   box-shadow: 0 0 5px 1px rgb(133, 133, 133);
-  padding: 1rem 0 0;
+  padding: 1rem 0 2.9rem;
   width: 30%;
   min-width: 320px;
   margin-right: 1.5%;
   height: auto;
   display: flex;
   flex-direction: column;
+  position: relative;
   transition: all 0.3s ease;
 }
 .coach-block:hover {
@@ -622,7 +623,7 @@ body.lock {
     max-width: 764px;
     min-width: 252px;
     margin: 0 auto 1.3rem;
-    padding: 0.5rem 0 0rem;
+    padding: 0.5rem 0 3rem;
   }
 }
 @media (max-width: 1024px) {
@@ -719,7 +720,7 @@ body.lock {
   font-size: 1.1rem;
   line-height: 1.5;
   padding: 1.3rem 1rem 0rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 @media (max-width: 1200px) {
   .coach-block__discription {
@@ -732,6 +733,10 @@ body.lock {
   text-align: center;
   font-size: 1.1rem;
   padding: 0.5rem 0rem 1.5rem 0rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 @media (max-width: 1200px) {
   .coach-block h4 {
