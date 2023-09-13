@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     } else {
                         elem.textContent = ''
                     }
+                    formConteiner.classList.remove('sending')
                     console.log('Не отправлено');
                 })    
             }
