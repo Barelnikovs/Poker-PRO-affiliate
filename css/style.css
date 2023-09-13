@@ -608,11 +608,21 @@ body.lock {
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 .coach-block:hover {
-  transform: scale(1.028);
+  transform: scale(1.06);
   box-shadow: 0 0 10px 1px rgb(134, 134, 134);
+}
+@media (max-width: 1200px) {
+  .coach-block:hover {
+    transform: scale(1.05);
+  }
+}
+@media (max-width: 1024px) {
+  .coach-block:hover {
+    transform: scale(1.04);
+  }
 }
 .coach-block a {
   text-decoration: none;
@@ -732,11 +742,14 @@ body.lock {
 .coach-block h4 {
   text-align: center;
   font-size: 1.1rem;
-  padding: 0.5rem 0rem 1.5rem 0rem;
+  padding: 0rem 0rem 1.5rem 0rem;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+  transition: text-underline-offset 0.3s, color 0.075s, -webkit-text-decoration 0.3s;
+  transition: text-decoration 0.3s, text-underline-offset 0.3s, color 0.075s;
+  transition: text-decoration 0.3s, text-underline-offset 0.3s, color 0.075s, -webkit-text-decoration 0.3s;
 }
 @media (max-width: 1200px) {
   .coach-block h4 {
@@ -892,7 +905,7 @@ body.lock {
 }
 .onboarding-conteiner .form__part {
   display: none;
-  height: 565px;
+  height: 575px;
   margin-bottom: 0.2rem;
 }
 @media (max-width: 576px) {
@@ -977,9 +990,10 @@ body.lock {
   color: #515151;
 }
 .onboarding-conteiner .form .filling {
-  text-align: right;
+  text-align: center;
   color: #ce441f;
   font-size: 1.2rem;
+  font-weight: bold;
   padding: 0 0.2rem 0.5rem 0;
 }
 @media (max-width: 576px) {

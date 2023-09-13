@@ -569,11 +569,18 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 
     &:hover {
-        transform: scale(1.028);
+        transform: scale(1.06);
         box-shadow: 0 0 10px 1px rgb(134, 134, 134);
+
+        @media (max-width: $breakpoint_xxl) {
+            transform: scale(1.05);
+        }
+        @media (max-width: $breakpoint_xl) {
+            transform: scale(1.04);
+        }
     }
 
     a {
@@ -683,11 +690,13 @@ body {
     h4 {
         text-align: center;
         font-size: 1.1rem;
-        padding: 0.5rem 0rem 1.5rem 0rem;
+        padding: 0rem 0rem 1.5rem 0rem;
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
+        transition: text-decoration 0.3s, text-underline-offset 0.3s, color 0.075s;
+
 
         @media (max-width: $breakpoint_xxl) {
             font-size: 1rem;
@@ -836,7 +845,7 @@ body {
 
         &__part {
             display: none;
-            height: 565px;
+            height: 575px;
             margin-bottom: 0.2rem;
 
             @media (max-width: $breakpoint_sm) {
@@ -918,9 +927,10 @@ body {
         }
 
         .filling {
-            text-align: right;
+            text-align: center;
             color: $base-color;
             font-size: 1.2rem;
+            font-weight: bold;
             padding: 0 0.2rem 0.5rem 0;
 
             @media (max-width: $breakpoint_sm) {

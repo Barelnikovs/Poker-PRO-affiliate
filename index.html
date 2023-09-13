@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Montserrat:ital,wght@0,400;0,500;1,400&family=Roboto+Slab:wght@500;600&display=swap" rel="stylesheet">
+    <script defer src="./js/navigation-burger.js"></script>
+    <script defer src="./js/onboarding.js"></script>
+    <script defer src="./js/form-validation.js"></script>
 </head>
 <body>
 
@@ -27,7 +30,7 @@
                     <li class="nav__li" data-goto=".coaches">Тренеры проекта</li>
                     <li class="nav__li" data-goto=".blog" style="display: none;">Блог</li>
                     <li class="nav__li" id="liToForm">Заполнить анкету</li>
-                    <li class="nav__li nav__li--telegram"><a href="https://t.me/roadtopokerpro"><span class="nav__telegram-text">Telegram</span><img src="./img/icons8-логотип-telegram-50.png" alt="telegram"></a></li>
+                    <li class="nav__li nav__li--telegram"><a href="https://t.me/roadtopokerpro" target="_blank"><span class="nav__telegram-text">Telegram</span><img src="./img/icons8-логотип-telegram-50.png" alt="telegram"></a></li>
                 </ul>
             </nav>
         </header>
@@ -152,19 +155,19 @@
                             </div>
                             <div class="form__question">
                                 <label class="form__label" for="formName">Как тебя зовут?</label>
-                                <input class="form__input" id="formName" type="text" placeholder="Фамилия и имя">
+                                <input class="form__input" id="formName" type="text" placeholder="Фамилия и имя" name="name">
                             </div>
                             <div class="form__question">
                                 <label class="form__label" for="formAge">Твой возраст</label>
-                                <input class="form__input" id="formAge" type="number">
+                                <input class="form__input" id="formAge" type="number" name="age">
                             </div>
                             <div class="form__question">
                                 <label class="form__label" for="formLocation">Город проживания</label>
-                                <input class="form__input" id="formLocation" type="text">
+                                <input class="form__input" id="formLocation" type="text" name="location">
                             </div>
                             <div class="form__question">
                                 <label class="form__label" for="formTelegram">Telegram для связи</label>
-                                <input class="form__input" id="formTelegram" type="text">
+                                <input class="form__input" id="formTelegram" type="text" name="telegram">
                             </div>
                             <div>
                                 <p class="filling"></p>
@@ -176,19 +179,19 @@
                             </div>
                             <div class="form__question">
                                 <label class="form__label" for="formTelegram">Играемая дисциплина</label>
-                                <select id="formTelegram">
+                                <select id="formTelegram" name="discipline">
                                     <option value="NL">NL</option>
                                     <option value="PLO">PLO</option>
                                 </select>
                             </div>
                             <div class="form__question">
                                 <label class="form__label" for="formLimits">Играемые лимиты и румы</label>
-                                <input class="form__input" id="formLimits" type="text">
+                                <input class="form__input" id="formLimits" type="text" name="limits">
                             </div>
 
                             <div class="form__question">
                                 <label class="form__label" for="formAboutExperience">Расскажите о своём опыте и карьере</label>
-                                <textarea class="form__input" id="formAboutExperience" rows="3" placeholder="Каковы твои цели? Чем может тебе помочь школа?"></textarea>
+                                <textarea class="form__input" id="formAboutExperience" rows="4" name="experience"></textarea>
                             </div>
                             <div>
                                 <p class="filling"></p>
@@ -200,11 +203,11 @@
                             </div>
                             <div class="form__question">
                                 <label class="form__label" for="formAboutbackground">Пару слов о внепокерном бэкграунде</label>
-                                <textarea class="form__input" id="formAboutbackground" rows="3" placeholder="На кого учился, где работал?"></textarea>
+                                <textarea class="form__input" id="formAboutbackground" rows="3" name="background" placeholder="На кого учился, где работал?"></textarea>
                             </div>
                             <div class="form__question">
                                 <label class="form__label" for="formExpectations">Что ожидаешь от обучения?</label>
-                                <textarea class="form__input" id="formExpectations" rows="3"></textarea>
+                                <textarea class="form__input" id="formExpectations" rows="4" name="expectations" placeholder="Каковы твои цели? Чем может тебе помочь школа?"></textarea>
                             </div>
                             <div>
                                 <p class="filling"></p>
@@ -225,10 +228,5 @@
             </div>
         </main>    
     </div>
-    
-    
-    <script src="./js/navigation-burger.js"></script>
-    <script src="./js/onboarding.js"></script>
-    <script src="./js/form-validation.js"></script>
 </body>
 </html>
