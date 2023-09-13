@@ -25,18 +25,25 @@ document.addEventListener('DOMContentLoaded', function() {
             formConteiner.classList.add('sending')
 
             let formData = new FormData(form)
+            console.log(formData)
             let xhr = new XMLHttpRequest();
+            console.log(xhr)
 
             xhr.onreadystatechange = function () {
+                console.log(xhr.readyState)
+                Loop2:
                 if (xhr.readyState === 4) {
+                    console.log(xhr.status)
                     if (xhr.status === 200) {
                         formConteiner.classList.remove('sending')
                         console.log('Отправлено');
                     } else {
                         dontSend()
+                        break Loop2
                     }
                 } else {
                     dontSend()
+                    break Loop2
                 }
             }
 
