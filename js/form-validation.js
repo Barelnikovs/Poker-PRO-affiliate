@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 body: formData
             })
             if (responce.ok) {
-                let result = await responce.json()
-                alert(result.message)
+                // let result = await responce.json()
+                // alert(result.message)
                 form.reset()
                 formConteiner.classList.remove('sending')
             } else {
@@ -43,42 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 })
                 formConteiner.classList.remove('sending')
-    
-            // let xhr = new XMLHttpRequest();
-            // console.log(xhr)
-
-            // xhr.onreadystatechange = function () {
-            //     console.log(xhr.readyState)
-            //     Loop2:
-            //     if (xhr.readyState === 4) {
-            //         console.log(xhr.status)
-            //         if (xhr.status === 200) {
-            //             formConteiner.classList.remove('sending')
-            //             console.log('Отправлено');
-            //         } else {
-            //             dontSend()
-            //             break Loop2
-            //         }
-            //     } else {
-            //         dontSend()
-            //         break Loop2
-            //     }
-            // }
-
-            // function dontSend() {
-            //     document.querySelectorAll('.filling').forEach((elem, index) => {
-            //         if (index === 2) {
-            //             elem.textContent = 'Ошибка отправки'
-            //         } else {
-            //             elem.textContent = ''
-            //         }
-            //         formConteiner.classList.remove('sending')
-            //         console.log('Не отправлено');
-            //     })    
-            // }
-
-            // xhr.open('POST', 'mail.php', true);
-            // xhr.send(formData);
             }
         } else {
             moveToErrorPart()
