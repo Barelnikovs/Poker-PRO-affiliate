@@ -39,6 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }             
                 form.reset()
                 formConteiner.classList.remove('sending')
+                document.querySelectorAll('.filling').forEach((elem, index) => {
+                    if (index === 2) {
+                        elem.textContent = 'Заявка успешно отправлена'
+                    }
+                })     
             } else {
                 document.querySelectorAll('.filling').forEach((elem, index) => {
                     if (index === 2) {
