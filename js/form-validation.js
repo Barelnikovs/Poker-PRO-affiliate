@@ -29,9 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 method: 'POST',
                 body: formData
             })
+            
             if (responce.ok) {
-                // let result = await responce.json()
-                // alert(result.message)
+                try {
+                    let result = await responce.json()
+                    alert(result.message)
+                } catch (err) {
+                    console.log(err)
+                }             
                 form.reset()
                 formConteiner.classList.remove('sending')
             } else {
