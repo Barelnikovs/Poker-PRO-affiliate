@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 formConteiner.classList.remove('sending')
                 document.querySelectorAll('.filling').forEach((elem, index) => {
                     if (index === 2) {
+                        elem.classList.add('green')
                         elem.textContent = 'Заявка успешно отправлена'
                     }
                 })     
@@ -56,7 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } else {
             moveToErrorPart()
-            document.querySelectorAll('.filling').forEach(elem => elem.textContent = 'Заполните все поля')
+            document.querySelectorAll('.filling').forEach(elem => {
+                elem.classList.remove('green')
+                elem.textContent = 'Заполните все поля'
+            })
             error = 0
         }
     }

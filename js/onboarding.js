@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Кнопки
     const liToForm = document.querySelector('#liToForm')
     const btnToForm = document.querySelector('#btnToForm')
+    const btnToFormFooter = document.querySelector('#footerButton')
 
     // Онбординг
     const overlay = document.querySelector('.onboarding-overlay')
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const close = document.querySelector('#close')
 
     liToForm.addEventListener('click', onboardingOn)
-    btnToForm.addEventListener('click', onboardingOn)
+    btnToFormFooter.addEventListener('click', onboardingOn)
     btnNext.addEventListener('click', next)
     btnReturn.addEventListener('click', Return)
 
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         btns.forEach(elem => elem.classList.remove('onboarding-conteiner__btn--active'))
         overlay.removeEventListener('click', onboardingOff)
         close.removeEventListener('click', onboardingOff)
+        document.querySelectorAll('.filling').forEach(elem => elem.classList.remove('green'))
     }
 
     function next() {
