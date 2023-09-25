@@ -33,15 +33,15 @@ try {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'daniilbarelnikov@gmail.com'; // Логин на почте
-  $mail->Password   = 'aarrjytchmfooekg'; // Пароль на почте
+  $mail->Username   = 'moneymakerqwer@gmail.com'; // Логин на почте
+  $mail->Password   = 'mddyyqtmzykrflnt'; // Пароль приложения Raisezone.net на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('daniilbarelnikov@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('moneymakerqwer@gmail.com', 'Заявка с Raisezone.net'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('daniilbarelnikov@gmail.com'); // Можно добавить ещё адрес, если нужно
+  $mail->addAddress('moneymakerqwer@gmail.com'); // Можно добавить ещё адрес, если нужно
 
   // Прикрипление файлов к письму
   if (!empty($file['name'][0])) {

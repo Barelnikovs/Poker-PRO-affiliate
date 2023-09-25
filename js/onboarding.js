@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const close = document.querySelector('#close')
 
     liToForm.addEventListener('click', onboardingOn)
+    btnToForm.addEventListener('click', onboardingOn)
     btnToFormFooter.addEventListener('click', onboardingOn)
     btnNext.addEventListener('click', next)
     btnReturn.addEventListener('click', Return)
