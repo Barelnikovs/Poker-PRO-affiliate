@@ -731,6 +731,10 @@ body {
         }
     }
 
+    a {
+        text-decoration: none;
+    }
+
     &__button {
         color: #fff;
         background-color: $base-color;
@@ -792,10 +796,6 @@ body {
             @media (max-width: 520px) {
                 text-align: center;
             }
-        }
-
-        a {
-            text-decoration: none;
         }
     }
 }

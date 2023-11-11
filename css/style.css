@@ -788,6 +788,9 @@ body.lock {
     margin-bottom: 0.5rem;
   }
 }
+.footer a {
+  text-decoration: none;
+}
 .footer__button {
   color: #fff;
   background-color: #ce441f;
@@ -858,9 +861,6 @@ body.lock {
   .footer ul li {
     text-align: center;
   }
-}
-.footer ul a {
-  text-decoration: none;
 }
 
 .onboarding-overlay {
